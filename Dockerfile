@@ -1,7 +1,5 @@
 FROM debian:buster
 
-ENV AUTOINDEX on
-
 # Install nginx, mariaDB, php, and utils
 RUN apt-get update && apt-get upgrade -y \
     && apt-get install -y \
