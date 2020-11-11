@@ -54,4 +54,4 @@ COPY ./srcs/nginx/default.tmpl /etc/nginx/sites-available/
 COPY ./srcs/entrypoint.sh /tmp/
 RUN chmod 744 /tmp/entrypoint.sh
 
-ENTRYPOINT ["render", "/etc/nginx/sites-available/default", "--", "bash", "entrypoint.sh"]
+ENTRYPOINT ["render", "/etc/nginx/sites-available/default", "--", "bash", "/tmp/entrypoint.sh"]
